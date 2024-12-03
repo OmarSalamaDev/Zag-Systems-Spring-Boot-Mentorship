@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#employee-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#employee-form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+#employee-form button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#employee-form button:hover {
+    background-color: #218838;
+}
+
+#employee-list {
+    margin-top: 20px;
+    text-align: center;
+}
