@@ -30,4 +30,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         String sql = "INSERT INTO employees (name, department, salary) VALUES (?, ?, ?)";
         jdbcTemplate.update(sql, employee.getName(), employee.getDepartment(), employee.getSalary());
     }
+    @Override
+    public void removeEmployee(int id) {
+        String sql = "DELETE FROM employees WHERE id = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }

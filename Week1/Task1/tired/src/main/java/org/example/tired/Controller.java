@@ -16,7 +16,14 @@ public class Controller {
         return employeeService.getAllEmployees();
     }
     @PostMapping("/api/employees")
-    public void addEmployee(Employee employee) {
+    public void addEmployee(@RequestBody Employee employee) {
+        if(employee.getName().equals("") || employee.getDepartment().equals("") || employee.getSalary() <= 0) {
+            return;
+        }
         employeeService.addEmployee(employee);
+    }
+    @DeleteMapping("/api/employees/{id}")
+    public void removeEmployee(@PathVariable int id) {
+        employeeService.removeEmployee(id);
     }
 }

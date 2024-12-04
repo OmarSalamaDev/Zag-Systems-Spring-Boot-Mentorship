@@ -9,9 +9,20 @@ async function fetchEmployees() {
 
 function displayEmployees(employees) {
     const employeeList = document.getElementById('employee-list');
-    employeeList.innerHTML = '';
+    employeeList.innerHTML = "";
+
     employees.forEach(emp => {
-        employeeList.innerHTML += `<p>${emp.name} - ${emp.department} - ${emp.salary}</p>`;
+        const item = `
+            <div class="item-container" id="${emp.id}">
+                <span class="item">${emp.name}</span>
+                <span class="item">${emp.department}</span>
+                <span class="item">${emp.salary}</span>
+                <span>
+                    <span class="material-symbols-outlined delete-icon" onclick="deleteEmployee(${emp.id})">delete</span>
+                </span>
+            </div>
+        `;
+        employeeList.innerHTML += item;
     });
 }
 
@@ -28,6 +39,14 @@ async function addEmployee() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(employee)
+    });
+
+    await fetchEmployees();
+}
+async function deleteEmployee(id) {
+
+    await fetch(`${apiUrl}/${id}`, {
+        method: 'DELETE'
     });
 
     await fetchEmployees();

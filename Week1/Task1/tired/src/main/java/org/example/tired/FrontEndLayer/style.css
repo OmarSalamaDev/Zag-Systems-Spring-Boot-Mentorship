@@ -16,6 +16,7 @@ h1, h2 {
 #employee-form input {
     margin: 5px;
     padding: 8px;
+    border-radius: 5px;
 }
 
 #employee-form button {
@@ -24,6 +25,8 @@ h1, h2 {
     color: white;
     border: none;
     cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 20px;
 }
 
 #employee-form button:hover {
@@ -33,4 +36,60 @@ h1, h2 {
 #employee-list {
     margin-top: 20px;
     text-align: center;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid black;
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+}
+
+.item {
+    width: 33%;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+}
+
+.titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+}
+
+.titles span {
+    width: 33%;
+    height: 100%;
+    padding: 1em;
+    text-align: center;
+}
+
+hr {
+    width: 80vh;
+    max-width: 500px;
+}
+
+.delete-icon {
+    color: #f05c5c;
+    transition: all 0.2s;
+    cursor: pointer;
+    padding-right: 1.5em;
+}
+
+.delete-icon:hover {
+    color: #ff0000;
+}
+.white {
+    padding-right: 1.5em;
+
 }

@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
     <title>Employee Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Employee Management system</h1>
-    <div id="employee-form">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="text" id="department" placeholder="Department" required>
-        <input type="number" id="salary" placeholder="Salary" required>
-        <button onclick="addEmployee()">Add Employee</button>
-    </div>
-    <h2>Employees List</h2>
-    <div id="employee-list"></div>
-
-    <script src="app.js"></script>
+<h1>Employee Management system</h1>
+<div id="employee-form">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="department" placeholder="Department" required>
+    <input type="number" id="salary" placeholder="Salary" required>
+    <button onclick="addEmployee()">Add Employee</button>
+</div>
+<h2>Employees List</h2>
+<div class="titles">
+    <span>Name</span>
+    <span>Department</span>
+    <span>Salary</span>
+    <span>
+        <span class="material-symbols-outlined white" >delete</span>
+    </span>
+</div>
+<hr>
+<div id="employee-list"></div>
+<script src="app.js"></script>
 </body>
 </html>

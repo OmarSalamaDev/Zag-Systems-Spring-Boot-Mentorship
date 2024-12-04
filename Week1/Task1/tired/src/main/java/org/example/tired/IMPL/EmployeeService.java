@@ -19,4 +19,7 @@ public class EmployeeService {
     public void addEmployee(Employee employee) {
         employeeDAO.addEmployee(employee);
     }
+    public void removeEmployee(int id) {
+        employeeDAO.removeEmployee(id);
+    }
 }
