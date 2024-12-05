@@ -1,23 +1,72 @@
+
+.material-symbols-rounded {
+    font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+}
+
+.unselectable-text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 20px;
     background-color: #f9f9f9;
 }
 
+* {
+    margin: 0;
+}
+
 h1, h2 {
     text-align: center;
+    margin: 1em;
 }
 
 #employee-form {
     text-align: center;
-    margin-bottom: 20px;
+    margin-block: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    width: 100%;
+
 }
 
-#employee-form input {
-    margin: 5px;
+#employee-form input, .enableEdit {
     padding: 8px;
     border-radius: 5px;
+    border: 1px solid rgb(185, 185, 185);
+    outline: none;
+    padding-block: 0.5em;
+    font-size: medium;
+    max-width: 200px;
 }
+
+.hide-numbers-input-arrows::-webkit-outer-spin-button,
+.hide-numbers-input-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hide-numbers-input-arrows {
+    -moz-appearance: textfield;
+}
+
+#employee-form input:focus {
+    border-color: #6c76f8;
+}
+
 
 #employee-form button {
     padding: 8px 15px;
@@ -26,7 +75,11 @@ h1, h2 {
     border: none;
     cursor: pointer;
     transition: all 0.2s;
-    border-radius: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
 }
 
 #employee-form button:hover {
@@ -34,7 +87,6 @@ h1, h2 {
 }
 
 #employee-list {
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -44,10 +96,11 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     background-color: #f1f1f1;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(185, 185, 185);
     width: 80vw;
     height: fit-content;
     margin: auto;
+
 }
 
 .item {
@@ -55,41 +108,94 @@ h1, h2 {
     height: 100%;
     padding: 1em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
 }
+
 
 .titles {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    border-block: 1px solid rgb(111, 111, 111);
     width: 80vw;
     height: fit-content;
     margin: auto;
-}
-
-.titles span {
-    width: 33%;
-    height: 100%;
-    padding: 1em;
-    text-align: center;
-}
-
-hr {
-    width: 80vh;
-    max-width: 500px;
 }
 
 .delete-icon {
     color: #f05c5c;
     transition: all 0.2s;
     cursor: pointer;
-    padding-right: 1.5em;
+    width: 1.7em;
 }
 
 .delete-icon:hover {
     color: #ff0000;
 }
-.white {
-    padding-right: 1.5em;
 
+.edit-icon {
+    color: #6c76f8;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 1.7em;
+}
+
+.edit-icon:hover {
+    color: #0048ff;
+}
+
+.cancel-btn {
+    color: #f05c5c;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 1.7em;
+}
+
+.cancel-btn:hover {
+    color: #ff0000;
+}
+
+.check-btn {
+    color: #28a745;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 1.7em;
+}
+
+
+.check-btn:hover {
+    color: #218838;
+}
+
+.editable {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+    font-size: medium;
+    text-align: center;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    padding-block: 0.5em;
+}
+
+.enableEdit {
+    max-width: 150px;
+    background-color: white;
+    border: 1px solid rgb(185, 185, 185);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    padding-block: 0.5em;
+}
+
+.enableEdit:focus {
+    border-color: #6c76f8;
 }

@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
     <title>Employee Management System</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Employee Management system</h1>
 <div id="employee-form">
     <input type="text" id="name" placeholder="Name" required>
     <input type="text" id="department" placeholder="Department" required>
-    <input type="number" id="salary" placeholder="Salary" required>
-    <button onclick="addEmployee()">Add Employee</button>
+    <input class="hide-numbers-input-arrows" type="number" id="salary" placeholder="Salary" required>
+    <button onclick="addEmployee()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-.425 0-.712-.288T11 20v-7H4q-.425 0-.712-.288T3 12t.288-.712T4 11h7V4q0-.425.288-.712T12 3t.713.288T13 4v7h7q.425 0 .713.288T21 12t-.288.713T20 13h-7v7q0 .425-.288.713T12 21"/></svg>
+        Add Employee
+    </button>
 </div>
 <h2>Employees List</h2>
 <div class="titles">
-    <span>Name</span>
-    <span>Department</span>
-    <span>Salary</span>
-    <span>
-        <span class="material-symbols-outlined white" >delete</span>
-    </span>
+    <span class="item">Name</span>
+    <span class="item">Department</span>
+    <span class="item">Salary</span>
+    <span class="item">Actions</span>
 </div>
-<hr>
 <div id="employee-list"></div>
-<script src="../app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
