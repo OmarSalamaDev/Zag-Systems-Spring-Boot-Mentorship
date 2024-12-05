@@ -70,4 +70,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         String sql = "DELETE FROM employees WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
+
+    @Override
+    public void updateEmployee(Employee employee) {
+        String sql = "UPDATE employees SET name = ?, department = ? , salary = ? WHERE id = ?";
+        jdbcTemplate.update(sql, employee.getName(), employee.getDepartment(), employee.getSalary() , employee.getId());
+    }
 }
