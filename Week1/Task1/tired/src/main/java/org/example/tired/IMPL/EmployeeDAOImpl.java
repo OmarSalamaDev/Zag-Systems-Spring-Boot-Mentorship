@@ -3,6 +3,7 @@ package org.example.tired.IMPL;
 import org.example.tired.Employee;
 import org.example.tired.EmployeeDAO;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,6 +29,13 @@ public class EmployeeDAOImpl implements EmployeeDAO {
      *
      * @return a list of all employees
      */
+    private final RowMapper<Employee> rowMapper = (rs, rowNum) -> new Employee(
+            rs.getInt("id"),
+            rs.getString("name"),
+            rs.getString("department"),
+            rs.getDouble("salary")
+    );
+
     @Override
     public List<Employee> getAllEmployees() {
         String sql = "SELECT * FROM employees";
