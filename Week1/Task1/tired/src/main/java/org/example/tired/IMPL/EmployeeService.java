@@ -12,7 +12,6 @@ public class EmployeeService {
     EmployeeService(EmployeeDAO employeeDAO) {
         this.employeeDAO = employeeDAO;
     }
-
     public List<Employee> getAllEmployees() {
         return employeeDAO.getAllEmployees();
     }
@@ -22,4 +21,5 @@ public class EmployeeService {
     public void removeEmployee(int id) {
         employeeDAO.removeEmployee(id);
     }
+    public void updateEmployee(Employee employee) { employeeDAO.updateEmployee(employee); }
 }
