@@ -66,6 +66,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void updateEmployee(Employee employee) {
         String sql = "UPDATE employees SET name = ?, department = ? , salary = ? WHERE id = ?";
-        jdbcTemplate.update(sql, employee.getName(), employee.getDepartment(), employee.getSalary());
+        jdbcTemplate.update(sql, employee.getName(), employee.getDepartment(), employee.getSalary() , employee.getId());
     }
 }
