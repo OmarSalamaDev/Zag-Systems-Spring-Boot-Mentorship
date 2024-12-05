@@ -13,6 +13,7 @@ import java.util.List;
  */
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
+
     private final JdbcTemplate jdbcTemplate;
 
     /**
@@ -39,14 +40,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public List<Employee> getAllEmployees() {
         String sql = "SELECT * FROM employees";
-        return jdbcTemplate.query(sql, (rs, rowNum) -> {
-            Employee emp = new Employee();
-            emp.setId(rs.getInt("id"));
-            emp.setName(rs.getString("name"));
-            emp.setDepartment(rs.getString("department"));
-            emp.setSalary(rs.getDouble("salary"));
-            return emp;
-        });
+        return jdbcTemplate.query(sql, rowMapper);
     }
 
     /**
