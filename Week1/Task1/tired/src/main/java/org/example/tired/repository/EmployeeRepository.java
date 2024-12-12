@@ -1,6 +1,5 @@
-package org.example.tired.model.Repository;
+package org.example.tired.repository;
 
-import java.util.List;
 
 import org.example.tired.model.Entities.Employee;
 import org.springframework.data.repository.CrudRepository;

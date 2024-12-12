@@ -1,13 +1,9 @@
 package org.example.tired;
 
-import org.example.tired.Services.EmployeeService;
+import org.example.tired.service.EmployeeService;
 import org.example.tired.model.DTO.EmployeeDTO;
-import org.example.tired.model.Entities.Employee;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Iterator;
-import java.util.List;
 
 @CrossOrigin(origins = "*") //> permits this domain to access the api
 @RestController //> indicates that this controller will handle HTTP requests and send responses in json
